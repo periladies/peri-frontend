@@ -4,10 +4,10 @@ import './App.css'
 
 // Initialize Supabase (replace with YOUR values)
 const SUPABASE_URL = 'https://bzdgbyzqfclmwpazrywl.supabase.co'  // From Supabase Settings
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ6ZGdieXpxZmNsbXdwYXpyeXdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NDY5NzYsImV4cCI6MjA5NDAyMjk3Nn0.1PGyLI67gbeq-n-fXAYegRYZfVZwRcG3ZDQeysMydJE'      // From Supabase API keys
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ6ZGdieXpxZmNsbXdwYXpyeXdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NDY5NzYsImV4cCI6MjA5NDAyMjk3Nn0.1PGyLI67gbeq-n-fXAYegRYZfVZwRcG3ZDQeysMydJE'      // From Supabase  keys
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
-export default function App() {
+export default function App() {API
   const [user, setUser] = useState(null)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -123,7 +123,28 @@ export default function App() {
         </div>
       </nav>
       <div className="main">
-        <p>🎉 You're logged in! Dashboard coming soon...</p>
+        <div>
+  <h2>Peri AI Assistant</h2>
+
+  <textarea
+    placeholder="Ask anything about perimenopause..."
+    rows="6"
+    style={{
+      width: '100%',
+      padding: '12px',
+      marginTop: '20px'
+    }}
+  />
+
+  <button
+    style={{
+      marginTop: '12px',
+      padding: '12px 20px'
+    }}
+  >
+    Send
+  </button>
+</div>
       </div>
     </div>
   )
